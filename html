@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Destinations Navigator</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+    
+    <!-- Header Section with Navigation Bar -->
+    <header>
+        <h1>Divine Destinations Navigator</h1>
+        <p>Your spiritual journey planning made easy!</p>
+        <nav>
+            <ul>
+                <li><a href="#temple-search">Explore Temples</a></li>
+                <li><a href="#popular-temples">Popular Temples</a></li>
+                <li><a href="#travel-options">Travel Options</a></li>
+                <li><a href="#weather">Weather Update</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introductory Section with Image and Text -->
+    <section id="intro">
+        <img src="img4.jpeg" alt="Temple Image">
+        <div class="intro-text">
+            <h2>Welcome to Divine Destinations Navigator</h2>
+            <p>Discover the most revered temples across India and plan a seamless spiritual journey. Let us guide you to your chosen temples with accurate travel options and essential weather updates to ensure a fulfilling experience.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Temple Search Section -->
+        <section id="temple-search">
+            <h2>Explore Temples</h2>
+            <input type="text" id="search-bar" placeholder="Enter temple name or location">
+            <button onclick="searchTemple()">Search</button>
+            <div id="temple-info"></div>
+        </section>
+
+        <!-- Popular Temples Section -->
+        <section id="popular-temples">
+            <h2>Popular Temples in India</h2>
+            <select id="temple-select" onchange="showTempleDetails()">
+                <option value="">Select a Temple</option>
+                <option value="Vaishno Devi Temple">Vaishno Devi Temple</option>
+                <option value="Kedarnath Temple">Kedarnath Temple</option>
+                <option value="Golden Temple">Golden Temple</option>
+                <option value="Meenakshi Temple">Meenakshi Temple</option>
+                <option value="Jagannath Temple">Jagannath Temple</option>
+            </select>
+            <div id="temple-details"></div>
+        </section>
+
+        <!-- Travel Options Section -->
+        <section id="travel-options">
+            <h2>Plan Your Travel</h2>
+            <label for="transport">Select Transportation Mode:</label>
+            <select id="transport">
+                <option value="bus">Bus</option>
+                <option value="train">Train</option>
+                <option value="car">Car</option>
+            </select>
+            <button onclick="calculateCost()">Get Travel Cost</button>
+            <div id="travel-cost"></div>
+        </section>
+
+        <!-- Weather Update Section -->
+        <section id="weather">
+            <h2>Weather Update</h2>
+            <button onclick="getWeather()">Get Weather</button>
+            <div id="weather-info"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Divine Destinations Navigator. All rights reserved.</p>
+    </footer>
+
+    <script src="project3.js"></script>
+</body>
+</html>
